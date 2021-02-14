@@ -57,3 +57,13 @@ img {
     width: 90%;
   }
 }
+.emoji{
+  font-size: 100px;
+  text-align: center;
+
+}
+.emojiContainer{
+  width: 400px;
+  height: auto;
+  background-color: #7b7985;
+}

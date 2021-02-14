@@ -32,7 +32,6 @@ const getImages = (query) => {
 }
 let slideIndex = 0;
 const selectItem = (event, img) => {
-  
   let element = event.target;
   let item = sliders.indexOf(img);
   if (item === -1) {
@@ -104,6 +103,7 @@ const changeSlide = (index) => {
 }
 searchBtn.addEventListener('click', function () {
   document.querySelector('.main').style.display = 'block';
+  document.querySelector('.emojiContainer').style.display = 'none';
   clearInterval(timer);
   const search = document.getElementById('search');
   const sliderContainer=document.getElementById('sliders');
@@ -143,3 +143,15 @@ const errorMessageShow=()=>{
  const errorMessage=document.getElementById('errorMessage');
  errorMessage.innerText="some thing is wrong please try later again";
 }
+
+//bonus section
+
+const displayEmoji=document.getElementById('displayEmoji');
+const emojis=['😄','😍','😛','😋','😎','😳','😫','😕','😡','💝','😻','😥','👹'];
+displayEmoji.addEventListener('input',(e)=>{
+  const createEmoji=document.getElementById('createEmoji');
+  let rangeValue=e.target.value;
+  createEmoji.innerText=emojis[rangeValue]
+})
+
+// const emojis=['&#128512','&#128513','&#128516','&#128520','&#128522','&#128526','&#128528','&#128540','&#128552','&#128514'];
